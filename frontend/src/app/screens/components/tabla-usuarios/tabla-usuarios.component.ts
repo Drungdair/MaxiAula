@@ -159,10 +159,12 @@ export class TablaUsuariosComponent implements OnInit {
 
   async aprobarProfesor(user: User) {
 
-      user.tipo=2;
+      let usuario: Partial<User> = {
+        tipo : 2
+      };
       try {
 
-        await this.userP.updateUsuarioById(user._id, user).toPromise();
+        await this.userP.updateUsuarioById(user._id, usuario).toPromise();
         this.popUp.aviso('Usuario Aprobado!','Se ha actualizado correctamente el usuario a profesor.','success');
         
       } catch (error) {
