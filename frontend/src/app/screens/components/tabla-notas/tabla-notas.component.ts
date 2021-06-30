@@ -32,7 +32,6 @@ export class TablaNotasComponent implements OnInit {
 
 
   constructor(
-    private userP: UserProviderService,
     private cursoP: CursoProviderService,
     private popUp : PopupService,
     public dialog: MatDialog
@@ -84,7 +83,7 @@ export class TablaNotasComponent implements OnInit {
       });
 
 
-      console.log(notas);
+      //console.log(notas);
 
       
     });

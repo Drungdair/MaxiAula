@@ -19,7 +19,7 @@ export class RutValidatorService implements AsyncValidator {
     const rut = formatRut(control.value); // cambiar el formato del rut para que quede con el formato almacenado
     if (!validateRut(rut)) return of({rutErroneo: true})
     return this.userP.getUsuarioByRUT(rut).pipe(
-      delay(2000), // delay de 2 s
+      delay(1000), // delay de 1 s
       map( resp => {
           return ( resp === null ) ? null : { rutTomado: true }
       })
