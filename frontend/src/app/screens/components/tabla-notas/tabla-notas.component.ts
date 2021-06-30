@@ -9,7 +9,6 @@ import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 import { Table } from 'primeng/table';
 import { ThemePalette } from '@angular/material/core';
 import { User } from 'src/app/core/models/user.model';
-import { UserProviderService } from 'src/app/core/providers/user/user-provider.service';
 
 @Component({
   selector: 'app-tabla-notas',
